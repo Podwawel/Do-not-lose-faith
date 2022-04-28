@@ -10,10 +10,8 @@ public class PatrolPoints : MonoBehaviour
 
     private int DrawRandomPatrolPoint()
     {
-        int patrolPointsAmount = _patrolPoints.Count - 1;
-
-        int drawedPatrolPoint = Random.Range(0, patrolPointsAmount);
-
+        int drawedPatrolPoint = Random.Range(0, _patrolPoints.Count);
+        Debug.Log(drawedPatrolPoint);
         return drawedPatrolPoint;
     }
 

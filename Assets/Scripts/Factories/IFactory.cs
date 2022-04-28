@@ -1,4 +1,4 @@
-public interface IFactory<T>
+public interface IFactory<T, F>
 {
-    T Create(T objectOfType);
+    T Create(T objectOfType, F secondArg);
 }

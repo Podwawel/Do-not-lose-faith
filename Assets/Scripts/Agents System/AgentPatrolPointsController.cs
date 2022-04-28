@@ -24,7 +24,6 @@ public class AgentPatrolPointsController : MonoBehaviour
         isWart = false;
         _patrolPoints = patrolPoints;
         _agent = GetComponent<NavMeshAgent>();
-        SetNewDestination();
     }
 
     public void CustomUpdate()

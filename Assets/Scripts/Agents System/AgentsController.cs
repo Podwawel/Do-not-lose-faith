@@ -10,7 +10,7 @@ public class AgentsController : MonoBehaviour
     [SerializeField]
     private GameObject _agentsFactoryObject;
 
-    private IFactory<GameObject> _agentsFactory;
+    private IFactory<GameObject, Vector3> _agentsFactory;
 
     private PatrolPoints _patrolPoints;
 
@@ -22,14 +22,14 @@ public class AgentsController : MonoBehaviour
     public void Initialize(PatrolPoints patrolPoints)
     {
         _patrolPoints = patrolPoints;
-        _agentsFactory = _agentsFactoryObject.GetComponent<IFactory<GameObject>>();
+        _agentsFactory = _agentsFactoryObject.GetComponent<IFactory<GameObject, Vector3>>();
         CreateAgentsInGivenAmount(amountToCreate, AgentType.TestAgent);
     }
 
     public void CreateNewAgent(AgentType agentType)
-    {      
-        GameObject newAgent = _agentsFactory.Create(_agentsDataStorage.GetAgentPrefab(agentType));
-        SetAgentAtRandomPatrolPoint(newAgent);
+    {
+        GameObject newAgent = 
+        _agentsFactory.Create(_agentsDataStorage.GetAgentPrefab(agentType), _patrolPoints.GetPatrolPointPosition());
         AgentData agentData;
         agentData.AgentObject = newAgent;
         agentData.AgentType = agentType;
@@ -53,11 +53,6 @@ public class AgentsController : MonoBehaviour
         {
             _activeAgentsList[i].AgentController.CustomUpdate();
         }
-    }
-
-    private void SetAgentAtRandomPatrolPoint(GameObject agentObject)
-    {
-        agentObject.transform.position = _patrolPoints.GetPatrolPointPosition();
     }
 
     public void CustomUpdate()
