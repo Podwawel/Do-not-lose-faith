@@ -5,6 +5,13 @@ using UnityEngine;
 [CreateAssetMenu()]
 public class AgentsDataStorage : ScriptableObject
 {
+    [System.Serializable]
+    struct AgentData
+    {
+        public AgentType AgentType;
+        public GameObject AgentObject;
+    }
+
     [SerializeField]
     private List<AgentData> _agentsList;
 
@@ -28,7 +35,6 @@ public class AgentsDataStorage : ScriptableObject
         AgentData nullData;
         nullData.AgentType = AgentType.None;
         nullData.AgentObject = null;
-        nullData.AgentController = null;
         Debug.LogError("CUSTOM ERROR: Agent nout found");
         return nullData;
     }
@@ -39,11 +45,6 @@ public enum AgentType
 {
     None = 0,
     TestAgent = 1,
-}
-[System.Serializable]
-public struct AgentData
-{
-    public AgentType AgentType;
-    public GameObject AgentObject;
-    public AgentPatrolPointsController AgentController;
+    AgentEvil = 2,
+    AgentGood = 3,
 }

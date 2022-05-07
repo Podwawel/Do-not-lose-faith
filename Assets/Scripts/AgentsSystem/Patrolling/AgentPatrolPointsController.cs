@@ -7,28 +7,31 @@ public class AgentPatrolPointsController : MonoBehaviour
 {
     private NavMeshAgent _agent;
     private PatrolPoints _patrolPoints;
+
     [SerializeField]
     private float _timeToMoveIfGlitched = 2f;
     [SerializeField]
     private float _baseTimeOfEachPointBreak = 3f;
+    [SerializeField, Range(0,1)]
+    private float _probabilityToGuard = 0.5f;
     [SerializeField]
     private LayerMask _patrolPointsLayerMask;
     [SerializeField]
     private float _patrolPointsCollistionEnabledDistance;
 
     private float _timeElapsed;
-    private bool isWart;
+    private bool isGuard;
 
     public void Initialize(PatrolPoints patrolPoints)
     {
-        isWart = false;
+        isGuard = false;
         _patrolPoints = patrolPoints;
         _agent = GetComponent<NavMeshAgent>();
     }
 
     public void CustomUpdate()
     {
-        if (isWart) return;
+        if (isGuard) return;
 
         _timeElapsed += Time.deltaTime;
 
@@ -44,35 +47,35 @@ public class AgentPatrolPointsController : MonoBehaviour
         if (other.gameObject.layer == _patrolPointsLayerMask 
             && Vector3.Distance(_agent.destination, transform.position) <= _patrolPointsCollistionEnabledDistance)
         {
-            int doBreak = Random.Range(0, 1);
+            float randomValue = RandomGenerator.ReturnRandomPropability();
 
-            if(doBreak == 0)
+            if(randomValue > _probabilityToGuard)
             {
                 SetNewDestination();
             }
             else
             {
-                StartWart();
+                Startguard();
             }
         }
     }
 
-    private void StartWart()
+    private void Startguard()
     {
-        StartCoroutine(WardCoroutine());
+        StartCoroutine(WanderingCoroutine());
     }    
 
-    private IEnumerator WardCoroutine()
+    private IEnumerator WanderingCoroutine()
     {
-        isWart = true;
-        float wardTimeElapsed = 0f;
-        float wardTime = Random.Range(_baseTimeOfEachPointBreak / 2, _baseTimeOfEachPointBreak * 2);
-        if(wardTimeElapsed >= wardTime)
+        isGuard = true;
+        float wanderingTimeElapsed = 0f;
+        float wanderingTime = RandomGenerator.ReturnRandomFloat(_baseTimeOfEachPointBreak / 2, _baseTimeOfEachPointBreak * 2);
+        if(wanderingTimeElapsed >= wanderingTime)
         {
             yield return new WaitForEndOfFrame();
         }
 
-        isWart = false;
+        isGuard = false;
         SetNewDestination();
     }
 

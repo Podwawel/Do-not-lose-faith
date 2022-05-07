@@ -5,9 +5,7 @@ using UnityEngine;
 public class GameplayController : MonoBehaviour
 {
     [SerializeField]
-    private PatrolPoints _patrolPoints;
-    [SerializeField]
-    private AgentsController _agentController;
+    private AgentSystemManager _agentSystemManager;
 
     private void Awake()
     {
@@ -16,11 +14,11 @@ public class GameplayController : MonoBehaviour
 
     private void Start()
     {
-        _agentController.Initialize(_patrolPoints);
+        _agentSystemManager.Initialize();
     }
 
     private void Update()
     {
-        _agentController.CustomUpdate();   
+        _agentSystemManager.CustomUpdate();   
     }
 }

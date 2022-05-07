@@ -1,0 +1,16 @@
+{
+    "name": "Patrolling",
+    "rootNamespace": "",
+    "references": [
+        "GUID:15ca977a672781c428a9de7c9cbb28d4"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

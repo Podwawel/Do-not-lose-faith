@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: AgentsData
   m_EditorClassIdentifier: 
   _agentsList:
-  - AgentType: 1
+  - AgentType: 2
     AgentObject: {fileID: 3726623863099011158, guid: 96d1b1446f339f740ab0be61fff290fd, type: 3}
+  - AgentType: 3
+    AgentObject: {fileID: 3726623863099011158, guid: 48fb7dbb7898dcb4baf976c752c8ad85, type: 3}

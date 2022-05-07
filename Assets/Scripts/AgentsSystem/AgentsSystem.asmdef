@@ -1,0 +1,20 @@
+{
+    "name": "AgentsSystem",
+    "rootNamespace": "",
+    "references": [
+        "GUID:116e80dd74d8c17428573293d82cec2a",
+        "GUID:15ca977a672781c428a9de7c9cbb28d4",
+        "GUID:5e54eabee3355dd4d849bd68ca4502cc",
+        "GUID:42e9b0aa5cefffa46beaf0682137e9be",
+        "GUID:dfbd3ad9ce0e68d45b34d0eb64f70565"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

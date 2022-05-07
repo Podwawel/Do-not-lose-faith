@@ -5,25 +5,30 @@ using UnityEngine;
 public class AgentsController : MonoBehaviour
 {
     [SerializeField]
-    private AgentsDataStorage _agentsDataStorage;
-
+    private AgentType _myAgentsType;
     [SerializeField]
     private GameObject _agentsFactoryObject;
 
     private IFactory<GameObject, Vector3> _agentsFactory;
 
+    [SerializeField]
     private PatrolPoints _patrolPoints;
+
+    private ChunksController _chunksController;
+
+    private AgentsDataStorage _agentsDataStorage;
 
     private List<AgentData> _activeAgentsList = new List<AgentData>();
 
     [SerializeField]
     private int amountToCreate;
 
-    public void Initialize(PatrolPoints patrolPoints)
+    public void Initialize(AgentsDataStorage agentsDataStorage, ChunksController chunksController)
     {
-        _patrolPoints = patrolPoints;
+        _chunksController = chunksController;
+        _agentsDataStorage = agentsDataStorage;
         _agentsFactory = _agentsFactoryObject.GetComponent<IFactory<GameObject, Vector3>>();
-        CreateAgentsInGivenAmount(amountToCreate, AgentType.TestAgent);
+        CreateAgentsInGivenAmount(amountToCreate, _myAgentsType);
     }
 
     public void CreateNewAgent(AgentType agentType)
@@ -33,10 +38,10 @@ public class AgentsController : MonoBehaviour
         AgentData agentData;
         agentData.AgentObject = newAgent;
         agentData.AgentType = agentType;
-        agentData.AgentController = agentData.AgentObject.GetComponent<AgentPatrolPointsController>();
+        agentData.AgentController = agentData.AgentObject.GetComponent<SingleAgentController>();
         _activeAgentsList.Add(agentData);
-        
-        agentData.AgentController.Initialize(_patrolPoints);
+
+        agentData.AgentController.Initialize(_chunksController, _patrolPoints);
     }
 
     public void CreateAgentsInGivenAmount(int amount, AgentType agentType)
@@ -65,4 +70,12 @@ public class AgentsController : MonoBehaviour
 
     }
 
+}
+
+[System.Serializable]
+public struct AgentData
+{
+    public AgentType AgentType;
+    public GameObject AgentObject;
+    public SingleAgentController AgentController;
 }
