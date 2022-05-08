@@ -19,36 +19,32 @@ public class Chunk : MonoBehaviour
 
     public NearestSeekableData FindTheNearestSeekable(Vector3 position, SeekableType type)
     {
-        float currentNearestDistance = 0;
+        float currentNearestDistance = 10000f;
         BaseSeekable nearestSeekable = null;
 
         for (int i = 0; i < _seekablesInMyRange.Count; i++)
         {
             if (_seekablesInMyRange[i].MyType == type)
-
             {
+
                 float distance = Vector3.Distance(position, _seekablesInMyRange[i].Seekable.transform.position);
-                if (currentNearestDistance == 0)
+
+                if (distance < currentNearestDistance)
                 {
                     currentNearestDistance = distance;
                     nearestSeekable = _seekablesInMyRange[i].Seekable;
                 }
-                else if (distance < currentNearestDistance)
-                {
-                    currentNearestDistance = distance;
-                    nearestSeekable = _seekablesInMyRange[i].Seekable;
-                }
+
+                NearestSeekableData data;
+                data.Distance = currentNearestDistance;
+                data.Seekable = nearestSeekable;
+
+                return data;
             }
-
-            NearestSeekableData data;
-            data.Distance = currentNearestDistance;
-            data.Seekable = nearestSeekable;
-
-            return data;
         }
 
         NearestSeekableData nullData;
-        nullData.Distance = 0;
+        nullData.Distance = 10000f;
         nullData.Seekable = null;
         return nullData;
     }

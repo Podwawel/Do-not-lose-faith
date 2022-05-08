@@ -12,10 +12,16 @@ public class ChunksController : MonoBehaviour
     [SerializeField]
     private Coordinates _borderCoordinates;
 
+    public Coordinates BorderCoordinates { get { return _borderCoordinates; } }
+
 
 
     public void Initialize()
     {
+        for(int i = 0; i < _chunks.Length; i++)
+        {
+            _chunks[i].Initialize();
+        }
         FillChunkData();
     }
 
@@ -31,9 +37,14 @@ public class ChunksController : MonoBehaviour
 
     public Chunk GetChunkByCoordinates(Coordinates coordinates)
     {
+        if (coordinates.X < 0 || coordinates.Y < 0)
+        {
+            Debug.LogError("CUSTOM ERROR: coords below 0." + " X: " + coordinates.X + " Y: " + coordinates.Y);
+            return null;
+        }
         if (coordinates.X > _borderCoordinates.X || coordinates.Y > _borderCoordinates.Y)
         {
-            Debug.LogError("CUSTOM ERROR: given coordinates are beyond border.");
+            Debug.LogError("CUSTOM ERROR: given coordinates are beyond border." + " X: " + coordinates.X + " Y: " + coordinates.Y);
             return null;
         }
         for(int i = 0; i < _globalChunkDatas.Count; i++)
@@ -42,7 +53,7 @@ public class ChunksController : MonoBehaviour
                 return _globalChunkDatas[i].Chunk;
         }
 
-        Debug.LogError("CUSTOM ERROR: Invalid coordinates - didnt find chunk with given coordinates.");
+        Debug.LogError("CUSTOM ERROR: Invalid coordinates - didnt find chunk with given coordinates." + " X: " + coordinates.X + " Y: " + coordinates.Y);
         return null;
     }
 }
@@ -82,4 +93,5 @@ public enum SeekableType
     TestSeekable1 = 1,
     TestSeekable2 = 2,
     TestSeekable3 = 3,
+    UltimateSeekable = 4,
 }

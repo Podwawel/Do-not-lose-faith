@@ -13,32 +13,41 @@ public class AgentChunkManager : MonoBehaviour
 
     private ChunksController _chunksController;
 
+    private float _testTimeElapsed = 0f;
+    private float _testTimeBeetweenSeeking = 10f;
+
     public void Initialize(ChunksController chunksController)
     {
         _agent = GetComponent<NavMeshAgent>();
         _chunksController = chunksController;
-
+        _chunksController.Initialize();
         Invoke("TestFind", 3f);
     }
 
     private void TestFind()
     {
-        int p = RandomGenerator.ReturnRandomInt(0, 3);
+        int p = RandomGenerator.ReturnRandomInt(1, 30);
 
-        if (p == 0) SeekableToLook = SeekableType.None;
-        if (p == 1) SeekableToLook = SeekableType.TestSeekable1;
-        if (p == 2) SeekableToLook = SeekableType.TestSeekable2;
-        if (p == 3) SeekableToLook = SeekableType.TestSeekable3;
+        if (p < 9) SeekableToLook = SeekableType.TestSeekable1;
+        if (p >= 9 && p < 18) SeekableToLook = SeekableType.TestSeekable2;
+        if (p >= 18 && p < 27) SeekableToLook = SeekableType.TestSeekable3;
+        if (p >= 27) SeekableToLook = SeekableType.UltimateSeekable;
 
-        SetDestinationToSeekable(FindSeekable(SeekableToLook));
+        SetDestinationToSeekable(FindSeekable(SeekableToLook, 3));
     }
 
     public void CustomUpdate()
     {
-
+        _testTimeElapsed += Time.deltaTime;
+        if(_testTimeElapsed > _testTimeBeetweenSeeking)
+        {
+            TestFind();
+            _testTimeBeetweenSeeking = RandomGenerator.ReturnRandomFloat(5f, 100f);
+            _testTimeElapsed = 0f;
+        }
     }
 
-    public BaseSeekable FindSeekable(SeekableType type)
+    public BaseSeekable FindSeekable(SeekableType type, int dimensionNumberOfChunksToSeekIn)
     {
         if (_myCurrentChunk == null) return null;
         if (type == SeekableType.None) return null;
@@ -48,54 +57,67 @@ public class AgentChunkManager : MonoBehaviour
 
         if(nearestSeekableData.Seekable == null)
         {
-            float currentNearestDistance = nearestSeekableData.Distance;
+            if (dimensionNumberOfChunksToSeekIn % 2 == 0)
+            {
+                Debug.LogError("CUSTOM ERROR: entered even number as dimension.");
+                return null;
+            }
+
+            int radiusToSeekIn = (dimensionNumberOfChunksToSeekIn - 1) / 2;
+
+            float currentNearestDistance = 100000f;
 
             NearestSeekableData newNearest = nearestSeekableData;
 
             int x = _myCurrentChunk.MyChunkData.Coordinates.X;
             int y = _myCurrentChunk.MyChunkData.Coordinates.Y;
+            int xBorder = _chunksController.BorderCoordinates.X;
+            int yBorder = _chunksController.BorderCoordinates.Y;
 
-            for (int i = x - 1; i <= x + 1; i++)
+            for (int i = x - radiusToSeekIn; i <= x + radiusToSeekIn; i++)
             {
-                for (int j = y - 1; j <= y + 1; j++)
+                for (int j = y - radiusToSeekIn; j <= y + radiusToSeekIn; j++)
                 {
-                    Coordinates coords;
-                    coords.X = i;
-                    coords.Y = j;
-                    Chunk newChunk = _chunksController.GetChunkByCoordinates(coords);
-                    if (newChunk == null) continue;
 
-                    nearestSeekableData = newChunk.FindTheNearestSeekable(transform.position, type);
+                  if (i < 0 || j < 0 || i > xBorder || j > yBorder) continue;
+                  Coordinates coords;
+                  coords.X = i;
+                  coords.Y = j;
+                    
+                  Chunk newChunk = _chunksController.GetChunkByCoordinates(coords);
 
-                    if(nearestSeekableData.Distance < currentNearestDistance)
-                    {
-                        newNearest = nearestSeekableData;
-                    }
+                  if (newChunk != null)
+                  {
+                      nearestSeekableData = newChunk.FindTheNearestSeekable(transform.position, type);
+
+                       if (nearestSeekableData.Distance < currentNearestDistance && nearestSeekableData.Seekable != null)
+                       {
+                           newNearest = nearestSeekableData;
+                           currentNearestDistance = newNearest.Distance;
+                       }
+                  }
                 }
             }
 
-            return newNearest.Seekable;
+            if (newNearest.Seekable != null) return newNearest.Seekable;
+            else return FindSeekable(type, dimensionNumberOfChunksToSeekIn + 2);
         }
         return nearestSeekableData.Seekable;
     }
 
     public void SetDestinationToSeekable(BaseSeekable seekable)
     {
-        if(seekable != null) _agent.SetDestination(seekable.transform.position);
+        if (seekable != null)
+        {
+            _agent.SetDestination(seekable.transform.position);
+        }
+        else Debug.Log("NULL SEEKABLE");
     }
 
     private void OnTriggerEnter(Collider other)
     {
         Chunk hitChunk = other.GetComponent<Chunk>();
         if(hitChunk)
-        {
-            _myCurrentChunk = hitChunk;
-        }
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        Chunk hitChunk = other.GetComponent<Chunk>();
-        if (hitChunk)
         {
             _myCurrentChunk = hitChunk;
         }

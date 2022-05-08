@@ -1269,7 +1269,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137653580}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.84
@@ -1336,7 +1336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5015b6d18cb83454fb1651c4240d8e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _myType: 2
+  _myType: 1
 --- !u!1 &146820798
 GameObject:
   m_ObjectHideFlags: 0
@@ -2915,7 +2915,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291698117}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.27, y: 0.1, z: 28.3}
+  m_LocalPosition: {x: 10.07, y: 0.1, z: 28.3}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2946,7 +2946,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291698117}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.84
@@ -3013,7 +3013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5015b6d18cb83454fb1651c4240d8e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _myType: 1
+  _myType: 2
 --- !u!1 &293987024
 GameObject:
   m_ObjectHideFlags: 0
@@ -3935,7 +3935,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 322302056}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.84
@@ -4958,7 +4958,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429591339}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.84
@@ -6090,7 +6090,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484275370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 98.8, y: 0.1, z: 81.4}
+  m_LocalPosition: {x: 103.8, y: 0.1, z: 81.4}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6121,7 +6121,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484275370}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.84
@@ -7090,6 +7090,26 @@ PrefabInstance:
       propertyPath: _myCoordinates.Y
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].MyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[1].MyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].Seekable
+      value: 
+      objectReference: {fileID: 2029690065}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[1].Seekable
+      value: 
+      objectReference: {fileID: 484275376}
     - target: {fileID: 2943459317756153663, guid: eba813a02d145794e841402884591176, type: 3}
       propertyPath: m_Name
       value: 33
@@ -7214,6 +7234,18 @@ PrefabInstance:
       propertyPath: _myCoordinates.Y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].MyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].Seekable
+      value: 
+      objectReference: {fileID: 1443112704}
     - target: {fileID: 2943459317756153663, guid: eba813a02d145794e841402884591176, type: 3}
       propertyPath: m_Name
       value: 32
@@ -7745,6 +7777,26 @@ PrefabInstance:
       propertyPath: _myCoordinates.Y
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].MyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[1].MyType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].Seekable
+      value: 
+      objectReference: {fileID: 686300827}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[1].Seekable
+      value: 
+      objectReference: {fileID: 1940386492}
     - target: {fileID: 2943459317756153663, guid: eba813a02d145794e841402884591176, type: 3}
       propertyPath: m_Name
       value: 03
@@ -8205,7 +8257,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 686300821}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.81, y: 0.1, z: 47.46}
+  m_LocalPosition: {x: 12.81, y: 0.1, z: 53.7}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -8236,7 +8288,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 686300821}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.84
@@ -8375,6 +8427,26 @@ PrefabInstance:
       propertyPath: _myCoordinates.Y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].MyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[1].MyType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].Seekable
+      value: 
+      objectReference: {fileID: 137653586}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[1].Seekable
+      value: 
+      objectReference: {fileID: 782375574}
     - target: {fileID: 2943459317756153663, guid: eba813a02d145794e841402884591176, type: 3}
       propertyPath: m_Name
       value: 22
@@ -9654,7 +9726,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 782375568}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.84
@@ -10649,7 +10721,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858954417}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.84
@@ -11186,6 +11258,18 @@ PrefabInstance:
       propertyPath: _myCoordinates.Y
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].MyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].Seekable
+      value: 
+      objectReference: {fileID: 916591184}
     - target: {fileID: 2943459317756153663, guid: eba813a02d145794e841402884591176, type: 3}
       propertyPath: m_Name
       value: 13
@@ -11324,15 +11408,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
       propertyPath: _seekablesInMyRange.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
       propertyPath: _seekablesInMyRange.Array.data[0].MyType
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
       propertyPath: _seekablesInMyRange.Array.data[1].MyType
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
       propertyPath: _seekablesInMyRange.Array.data[2].MyType
@@ -11401,7 +11485,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916591178}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.7, y: 0.1, z: 91.39}
+  m_LocalPosition: {x: 18.7, y: 0.1, z: 79.3}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -11432,7 +11516,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916591178}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.84
@@ -11499,7 +11583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5015b6d18cb83454fb1651c4240d8e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _myType: 2
+  _myType: 1
 --- !u!1 &919613015
 GameObject:
   m_ObjectHideFlags: 0
@@ -11560,7 +11644,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919613015}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.84
@@ -11627,7 +11711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5015b6d18cb83454fb1651c4240d8e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _myType: 3
+  _myType: 1
 --- !u!1 &919710932
 GameObject:
   m_ObjectHideFlags: 0
@@ -12707,6 +12791,18 @@ PrefabInstance:
       propertyPath: _myCoordinates.Y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].MyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].Seekable
+      value: 
+      objectReference: {fileID: 1154092228}
     - target: {fileID: 2943459317756153663, guid: eba813a02d145794e841402884591176, type: 3}
       propertyPath: m_Name
       value: 21
@@ -13479,6 +13575,18 @@ PrefabInstance:
       propertyPath: _myCoordinates.Y
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].MyType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].Seekable
+      value: 
+      objectReference: {fileID: 2037078527}
     - target: {fileID: 2943459317756153663, guid: eba813a02d145794e841402884591176, type: 3}
       propertyPath: m_Name
       value: 04
@@ -13892,6 +14000,18 @@ PrefabInstance:
       propertyPath: _myCoordinates.Y
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].MyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].Seekable
+      value: 
+      objectReference: {fileID: 1494250012}
     - target: {fileID: 2943459317756153663, guid: eba813a02d145794e841402884591176, type: 3}
       propertyPath: m_Name
       value: 23
@@ -14638,6 +14758,18 @@ PrefabInstance:
       propertyPath: _myCoordinates.Y
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].MyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].Seekable
+      value: 
+      objectReference: {fileID: 1567214415}
     - target: {fileID: 2943459317756153663, guid: eba813a02d145794e841402884591176, type: 3}
       propertyPath: m_Name
       value: 14
@@ -15068,6 +15200,18 @@ PrefabInstance:
       propertyPath: _myCoordinates.X
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].MyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].Seekable
+      value: 
+      objectReference: {fileID: 919613021}
     - target: {fileID: 2943459317756153663, guid: eba813a02d145794e841402884591176, type: 3}
       propertyPath: m_Name
       value: 30
@@ -15627,7 +15771,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154092222}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.84
@@ -15694,7 +15838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5015b6d18cb83454fb1651c4240d8e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _myType: 1
+  _myType: 2
 --- !u!1 &1155678377
 GameObject:
   m_ObjectHideFlags: 0
@@ -17459,6 +17603,18 @@ PrefabInstance:
       propertyPath: _myCoordinates.Y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].MyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].Seekable
+      value: 
+      objectReference: {fileID: 858954423}
     - target: {fileID: 2943459317756153663, guid: eba813a02d145794e841402884591176, type: 3}
       propertyPath: m_Name
       value: 11
@@ -17861,7 +18017,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1348562609}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.84
@@ -19729,7 +19885,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1443112698}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.84
@@ -20125,7 +20281,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494250006}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.84
@@ -21014,6 +21170,134 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 527146306760895521, guid: 2c84308ef5108c04a9b5ba1b46ca4e95, type: 3}
   m_PrefabInstance: {fileID: 1560822037}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1567214413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1567214414}
+  - component: {fileID: 1567214419}
+  - component: {fileID: 1567214418}
+  - component: {fileID: 1567214417}
+  - component: {fileID: 1567214416}
+  - component: {fileID: 1567214415}
+  m_Layer: 0
+  m_Name: SeekableObject (18)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1567214414
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567214413}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 42, y: 0.1, z: 91.7}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 2022330681}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1567214415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567214413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5015b6d18cb83454fb1651c4240d8e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myType: 2
+--- !u!208 &1567214416
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567214413}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!135 &1567214417
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567214413}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.84
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1567214418
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567214413}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 90e748350d5828e409737a120269a185, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1567214419
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567214413}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1574436814
 GameObject:
   m_ObjectHideFlags: 0
@@ -21630,6 +21914,18 @@ PrefabInstance:
       propertyPath: _myCoordinates.X
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].MyType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].Seekable
+      value: 
+      objectReference: {fileID: 1721127063}
     - target: {fileID: 2943459317756153663, guid: eba813a02d145794e841402884591176, type: 3}
       propertyPath: m_Name
       value: 20
@@ -22347,7 +22643,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721127057}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.84
@@ -22414,7 +22710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5015b6d18cb83454fb1651c4240d8e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _myType: 1
+  _myType: 3
 --- !u!1001 &1722581677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22506,7 +22802,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735673502}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.7, y: 0.1, z: 12.6}
+  m_LocalPosition: {x: -21.59, y: 0.1, z: 12.6}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -22537,7 +22833,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735673502}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.84
@@ -22604,7 +22900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5015b6d18cb83454fb1651c4240d8e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _myType: 2
+  _myType: 1
 --- !u!1 &1738539354
 GameObject:
   m_ObjectHideFlags: 0
@@ -24546,7 +24842,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940386486}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.84
@@ -26094,6 +26390,18 @@ PrefabInstance:
       propertyPath: _myCoordinates.Y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].MyType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943459317756153662, guid: eba813a02d145794e841402884591176, type: 3}
+      propertyPath: _seekablesInMyRange.Array.data[0].Seekable
+      value: 
+      objectReference: {fileID: 429591345}
     - target: {fileID: 2943459317756153663, guid: eba813a02d145794e841402884591176, type: 3}
       propertyPath: m_Name
       value: 31
@@ -26358,6 +26666,8 @@ Transform:
   - {fileID: 484275371}
   - {fileID: 1494250007}
   - {fileID: 1443112699}
+  - {fileID: 1567214414}
+  - {fileID: 2037078526}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26390,7 +26700,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029690059}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 98.8, y: 0.1, z: 52.8}
+  m_LocalPosition: {x: 100.8, y: 0.1, z: 52.8}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -26421,7 +26731,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029690059}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.84
@@ -26603,6 +26913,134 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033764171}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2037078525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2037078526}
+  - component: {fileID: 2037078531}
+  - component: {fileID: 2037078530}
+  - component: {fileID: 2037078529}
+  - component: {fileID: 2037078528}
+  - component: {fileID: 2037078527}
+  m_Layer: 0
+  m_Name: SeekableObject (19)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2037078526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037078525}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.3, y: 0.1, z: 98.4}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 2022330681}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2037078527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037078525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5015b6d18cb83454fb1651c4240d8e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myType: 4
+--- !u!208 &2037078528
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037078525}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!135 &2037078529
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037078525}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.84
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2037078530
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037078525}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 90e748350d5828e409737a120269a185, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2037078531
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037078525}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2049800210
 GameObject:
   m_ObjectHideFlags: 0
